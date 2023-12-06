@@ -3,7 +3,8 @@
 /**
  * Module dependencies.
  */
-require("dotenv").config();
+
+let config = require("./config");
 
 var app = require("./app");
 var debug = require("debug")("demopaymentnodb:server");
@@ -13,8 +14,7 @@ var http = require("http");
  * Get port from environment and store in Express.
  */
 
-var host = process.env.NETWORK_HOST || process.env.LOCAL_HOST;
-var port = normalizePort(process.env.PORT || "8888");
+var port = normalizePort(config.App.Port);
 app.set("port", port);
 
 /**
@@ -30,7 +30,7 @@ var server = http.createServer(app);
 server.listen(port);
 server.on("error", onError);
 server.on("listening", onListening);
-console.log(`App running on: http://${host}:${port}`);
+console.log(`App running on: ${config.App.Url}`);
 
 /**
  * Normalize a port into a number, string, or false.
