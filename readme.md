@@ -1,3 +1,5 @@
+# Online payment VNPAY
+
 1. Cài đặt nodejs lên máy cần chạy. Download nodejs tại: https://nodejs.org/en/
 2. Vào command (cmd) và chuyển tới thư mục code demo
 3. Cài đặt module cần thiết bằng lệnh: npm install
