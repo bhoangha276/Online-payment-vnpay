@@ -5,7 +5,7 @@
  */
 require("dotenv").config();
 
-var app = require("../app");
+var app = require("./app");
 var debug = require("debug")("demopaymentnodb:server");
 var http = require("http");
 
