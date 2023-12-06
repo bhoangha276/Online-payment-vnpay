@@ -18,7 +18,7 @@ const Vnpay = {
   HashSecret: process.env.VNP_HASH_SECRET,
   Url: process.env.VNP_URL,
   Api: process.env.VNP_API,
-  ReturnUrl: `${App.url}/${process.env.VNP_RETURN_URL}`,
+  ReturnUrl: process.env.VNP_RETURN_URL,
 };
 
 module.exports = {
